@@ -140,10 +140,10 @@ function getColor2(magnitude) {
     return "#FD33FF";
   }
   if (magnitude > 5) {
-    return "#3348FF";
+    return "#ea2c2c";
   }
   if (magnitude <= 5) {
-    return "#3386FF";
+    return "#ea822c";
   }
 
 }
@@ -183,11 +183,8 @@ majorEarthquakes.addTo(map);
 });
 
 // Here we create a legend control object.
-let legend = L.control({
-  position: "bottomright"
-
-});
-
+let legend = L.control({position: "bottomright"});
+// const magnitudes = [0, 1, 2, 3, 4, 5];
 // Then add all the details for the legend
 legend.onAdd = function() {
   let div = L.DomUtil.create("div", "info legend");
